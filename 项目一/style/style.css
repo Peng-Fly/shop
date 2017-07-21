@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    background-color: #fff;
+}
+.nav{
+    width: 100%;
+    height: 30px;
+    background-color: #f7f7f7;
+}
+.cen{
+    width:1092.8px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.cen a{
+    display: inline-block;
+    padding: 0 10px;
+}
+.cen a:hover{
+    color: #f9733d;
+}
+.conta{
+    float: right;
+    margin-right: 40px;
+}
+.conta-left{
+    float: left;
+}
+.conta-rgt{
+    float: right;
+    margin-right: 20px;
+}
+.conta-wei{
+    float: right;
+}
+.conta-wei em{
+    color: #f40;
+    padding-right: 5px;
+}
+.logo{
+     margin-top: 20px;
+     width: 132px;
+     height: 58px;
+     background-image: url("../images/index/logo .png");
+     float: left;
+ }
+.logo>a{
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+}
+/*搜索*/
+.search{
+    text-align: center;
+    line-height: 100px;
+    width: 1092.8px;
+    margin: 0 auto;
+    height: 100px;
+    background-color:#fff;
+}
+#search-text{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #f96116;
+}
+#search-btn{
+    width: 100px;
+    height: 32px;
+    background-color: #f96116;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: -5px;
+    padding-bottom: 2px;
+}
+.box{
+    width: 1092.8px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+/*上面*/
+.nav-list{
+    width: 100%;
+    height: 50px;
+    background-color: #f96116;
+}
+.list{
+    list-style: none;
+    height: 50px;
+    width: 1092.8px;
+    margin:0 auto;
+    background: #f96116;
+}
+.list .line{
+    background: #f96116;
+    float: left;
+    width:10%;
+    line-height: 50px;
+    text-align: center;
+}
+.list .line a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+}
+.list .line:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+/*结尾*/
+.commont-vip{
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+}
+.commont-vip ul{
+    width: 1092.8px;
+    height: 66px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+.commont-vip ul li{
+    float: left;
+    width: 20%;
+    margin-right: 72px;
+}
+.commont-vip ul li i{
+    margin-right: 15px;
+}
+.commont-vip ul li.foor{
+    margin-right: 0;
+}
+.commont-vip ul li .vip-one{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    background: url("../images/background/quan.png");
+}
+.commont-vip ul li .vip-two{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    background: url("../images/background/quan.png") -65px 0;
+}
+.commont-vip ul li .vip-three{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    background: url("../images/background/quan.png") -130px 0;
+}
+.commont-vip ul li .vip-four{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    background: url("../images/background/quan.png") -195px 0;
+}
+.commont-vip ul li h6{
+    line-height: 32px;
+    font-size: 18px;
+    color: #666666;
+    text-align: left;
+}
+.commont-vip ul li span{
+    display: block;
+    line-height: 30px;
+    text-align: left;
+}
+footer{
+    width: 100%;
+    height: 520px;
+    background-color: #fff;
+    border-top:1px solid #e7e7e7;
+}
+footer .c-box{
+    width: 1092.8px;
+    margin: 0 auto;
+    height: 172px;
+    padding: 25px 0px;
+    border-bottom: 1px solid #e7e7e7;
+}
+/*服务*/
+footer .c-box .tel-email{
+    width: 150px;
+    height: 107px;
+    float: left;
+}
+footer .c-box .tel-email p{
+    line-height:30px;
+    font-size: 16px;
+    color: #666666;
+}
+/*中间*/
+footer .c-box .helper{
+    float: left;
+    width: 733px;
+    height: 172px;
+    padding-left: 50px;
+    border-left:1px solid #e7e7e7;
+    border-right:1px solid #e7e7e7;
+}
+footer .c-box .helper li{
+    float: left;
+    width: 20%;
+}
+footer .c-box .helper li h1{
+    line-height: 40px;
+    font-size: 16px;
+    color: #666;
+}
+footer .c-box .helper li p{
+    line-height: 30px;
+    font-size: 13px;
+    color: #666666;
+}
+/*二维码*/
+footer .c-box .qr{
+    float: left;
+}
+footer .c-box .qr img{
+    padding: 20px;
+}
+footer .c-box .qr p{
+    text-align: center;
+    color: #666;
+}
+footer .h-box{
+    width: 1092.8px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer .h-box .hui{
+    background: url(../images/background/huijia.png) center center no-repeat;
+    width: 100%;
+    height: 70px;
+}
+footer .h-box p{
+    text-align: center;
+    line-height: 40px;
+    color: #666;
+}
+footer .h-box p a{
+    padding-left: 5px;
+    color: #666;
+}
+footer .h-box .biaozhi{
+    width:100%;
+    height: 50px;
+    background: url("../images/background/biaozhi.png") center center no-repeat;
+}
+footer .h-box > img{
+    width: 36px;
+    display: block;
+    margin: 0 auto;
+}

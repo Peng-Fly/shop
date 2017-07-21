@@ -1,0 +1,192 @@
+/*轮播*/
+.banner{
+    width: 100%;
+    height: 411px;
+    /*background-color: chartreuse;*/
+    position: relative;
+}
+.banner ul{
+    width: 100%;
+    height: 100%;
+}
+.banner ul li{
+    width: 100%;
+    float: left;
+    position: absolute;
+    display: none;
+}
+.banner ul li .ban-div{
+    width:1092.8px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.banner ul li .ban-div img{
+    width: 100%;
+}
+.banner ul li.banner-one{
+    background: #f3f5f7;
+    display: block;
+}
+.banner ul li.banner-two{
+    background: rgb(248, 241, 225);
+}
+.banner ul li.banner-three{
+    background: rgb(176, 227, 215);
+}
+.banner ul li.banner-four{
+    background: rgb(216, 238, 232);
+}
+.banner ul li.banner-five{
+    background: rgb(199, 231, 255);
+}
+/*按钮*/
+.btns span{
+    position: absolute;
+    width:40px;
+    height: 80px;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 40px;
+    background-color: rgba(0,0,0,0.2);
+    line-height: 80px;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+}
+.banner:hover span{
+    display: block;
+}
+.btns span:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+.leftBtn{
+    left: 130px;
+}
+.rgtBtn{
+    right: 130px;
+}
+/*小圆点*/
+.cir{
+    position: absolute;
+    width: 130px;
+    height: 20px;
+    bottom: 10px;
+    right: 44%;
+    z-index: 999;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 10px;
+}
+.cir ol{
+    list-style: none;
+}
+.cir ol li{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    margin: 2px 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.cir ol li.crr{
+    background-color: #f40;
+}
+/*log*/
+.log{
+    width:100px;
+    height: 100px;
+    background-image: url("../images/index/log.gif");
+    background-size: 100% 100%;
+    float: right;
+}
+.log a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+/*下面*/
+.list-two{
+    list-style: none;
+    width: 1110px;
+    height: 100%;
+}
+.lines{
+    height: 250px;
+    width: 200px;
+    background-color: #fff;
+    float: left;
+    position: relative;
+    margin: 10px 20px 10px 0;
+    border:1px solid #eeeeee;
+    box-shadow:  0 4px 8px 0 rgba(7,17,27,.1);
+}
+.lines:hover{
+    border:1px solid #f40;
+    box-shadow: 0 8px 16px 0 rgba(7,17,27,.2);
+    transition: .3s all linear;
+}
+/*优惠小图标*/
+.lines .afe{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}
+.lines .afe .afes{
+    text-align: center;
+    display: block;
+    width: 60px;
+    height: 33px;
+    background: #fba30a;
+    position: relative;
+    margin-bottom: 3px;
+    color: #FFF;
+    line-height: 13px;
+    font-size: 13px;
+    padding-top: 5px;
+}
+.lines .afe .afespan{
+    display: block;
+    background: url(../images/index/afe.png) bottom left no-repeat;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+.list-two li.Lis{
+    margin-right: 0;
+}
+.lines img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 5px auto;
+    border-radius: 50%;
+}
+.lines .spans{
+    line-height: 30px;
+    color: #000;
+    display: inline-block;
+    padding: 10px 15px;
+}
+.lines .spana{
+    color: #f40;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+.lines .buy{
+    position: absolute;
+    bottom:10px;
+    right: 15px;
+    background-color: #f40;
+    color: #fff;
+    padding: 5px 10px;
+}
