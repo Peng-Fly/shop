@@ -1,0 +1,159 @@
+@charset "UTF-8";
+html {
+  font-size: 15px; }
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 18px; } }
+body {
+  font-size: 14px;
+  font-family: "microsoft YaHei";
+  background-color: #fff;
+  overflow-x: hidden;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 540px; }
+
+.fixed-top {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee; }
+  .fixed-top .return {
+    float: left;
+    height: 100%;
+    padding-left: 5%; }
+    .fixed-top .return a {
+      display: block; }
+      .fixed-top .return a img {
+        width: 50%;
+        margin-top: 85%; }
+  .fixed-top .sou {
+    width: 70%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    float: left;
+    border-radius: 20px;
+    margin-left: 5%;
+    position: relative;
+    top: 0.3rem;
+    text-align: center; }
+  .fixed-top .dian {
+    float: right;
+    width: 15%;
+    height: 100%; }
+    .fixed-top .dian a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("../images/menu.png") no-repeat 12px 18px;
+      background-size: 25px 8px; }
+
+/*内容区 */
+.box-cont {
+  width: 100%; }
+  .box-cont .rec-list {
+    width: 100%; }
+    .box-cont .rec-list img {
+      width: 100%; }
+    .box-cont .rec-list .rec-name {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.2rem 0.7rem;
+      color: #080808; }
+    .box-cont .rec-list .desc {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.2rem 0.7rem;
+      color: #5e5e5e;
+      font-size: 0.9rem; }
+    .box-cont .rec-list .rec-mo {
+      width: 100%;
+      padding: 0.2rem 0.7rem;
+      box-sizing: border-box;
+      color: #ff8161;
+      font-weight: bold;
+      font-size: 1.3rem; }
+    .box-cont .rec-list .rec-dd {
+      width: 100%;
+      padding: 0.2rem 0.7rem;
+      box-sizing: border-box; }
+      .box-cont .rec-list .rec-dd span {
+        padding: 0.1rem 0.5rem;
+        color: #fff;
+        background-color: #ff5753;
+        border-radius: 5px; }
+    .box-cont .rec-list .rate {
+      width: 100%;
+      height: 4rem;
+      border-top: 5px solid #eee;
+      border-bottom: 5px solid #eee;
+      padding: 1rem 1rem;
+      box-sizing: border-box; }
+      .box-cont .rec-list .rate .rate-m {
+        box-sizing: border-box;
+        float: left;
+        color: red;
+        border: 1px solid red;
+        border-radius: 5px; }
+      .box-cont .rec-list .rate .rate-j {
+        padding-left: 2rem;
+        color: #5e5e5e; }
+
+.add-shop {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+  min-width: 320px;
+  max-width: 540px;
+  background: #fff; }
+  .add-shop .btn-left {
+    float: left;
+    height: 100%;
+    width: 50%; }
+    .add-shop .btn-left i {
+      width: 100%;
+      height: 1.5rem;
+      display: block;
+      text-align: center; }
+    .add-shop .btn-left a {
+      float: left;
+      width: 33.33%;
+      color: #5e5e5e;
+      text-decoration: none; }
+    .add-shop .btn-left a.tab i {
+      background: url("../images/icon_shop.png") no-repeat center center;
+      background-size: 22px 22px; }
+    .add-shop .btn-left a.cart i {
+      background: url("../images/icon_shoppingcart.png") no-repeat center center;
+      background-size: 22px 22px; }
+    .add-shop .btn-left div {
+      float: left;
+      width: 33.33%;
+      color: #5e5e5e; }
+      .add-shop .btn-left div i {
+        background: url("../images/fav.png") no-repeat center center;
+        background-size: 22px 22px; }
+  .add-shop .btn-rgt {
+    float: right;
+    width: 50%; }
+    .add-shop .btn-rgt button {
+      border: none;
+      outline: none;
+      height: 3rem;
+      width: 50%;
+      float: right;
+      color: #fff; }
+    .add-shop .btn-rgt .go {
+      background-color: rgba(250, 180, 90, 0.93); }
+    .add-shop .btn-rgt .car {
+      background: linear-gradient(to right, rgba(253, 132, 89, 0.93), rgba(247, 86, 82, 0.93)); }
+
+/*# sourceMappingURL=details.css.map */

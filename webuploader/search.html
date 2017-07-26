@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
-    <title>分类页</title>
+    <title>搜索</title>
     <link rel="stylesheet" href="css/cssreset-min.css">
-    <link rel="stylesheet" href="css/classify.css">
+    <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
 <nav class="fixed-top">
@@ -18,24 +18,18 @@
     <!--搜索-->
     <div class="sou">
         <img src="images/sousou.png" alt="">
-        <input type="text" placeholder="搜索店铺/商品/种类">
+        <input type="text" placeholder="搜索店铺/商品/种类" id="searchText">
     </div>
     <!--更多-->
     <div class="dian">
-        <a href="javascript:"></a>
+        <a href="javascript:">搜索</a>
     </div>
 </nav>
-<div class="box">
-    <header>
-        <ul class="class-nav" id="classNav">
-        </ul>
-    </header>
-    <section>
-        <ul class="xhr-cont" id="xhrCont"></ul>
-    </section>
-</div>
+<section>
+    <ul id="souCont" class="sou-cont"></ul>
+</section>
 <script src="script/zeptoWithFx.js"></script>
 <script src="script/common.js"></script>
-<script src="script/classify.js"></script>
+<script src="script/search.js"></script>
 </body>
 </html>

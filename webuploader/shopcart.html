@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
-    <title>分类页</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="css/cssreset-min.css">
-    <link rel="stylesheet" href="css/classify.css">
+    <link rel="stylesheet" href="css/shopcart.css">
 </head>
 <body>
 <nav class="fixed-top">
@@ -15,27 +15,32 @@
             <img src="images/arrow_left.png" alt="">
         </a>
     </div>
-    <!--搜索-->
+    <!--名字-->
     <div class="sou">
-        <img src="images/sousou.png" alt="">
-        <input type="text" placeholder="搜索店铺/商品/种类">
+        购物车
     </div>
     <!--更多-->
     <div class="dian">
         <a href="javascript:"></a>
     </div>
 </nav>
-<div class="box">
-    <header>
-        <ul class="class-nav" id="classNav">
-        </ul>
-    </header>
-    <section>
-        <ul class="xhr-cont" id="xhrCont"></ul>
-    </section>
-</div>
+<section>
+
+</section>
+<footer>
+    <div class="kuang">
+        <input type="checkbox" class="ans" id="allCheck">
+    </div>
+    <span class="allCont">全选</span>
+    <div class="close">
+        结算
+    </div>
+    <div class="total">
+        合计：￥00.00
+    </div>
+</footer>
 <script src="script/zeptoWithFx.js"></script>
 <script src="script/common.js"></script>
-<script src="script/classify.js"></script>
+<script src="script/shopcart.js"></script>
 </body>
 </html>

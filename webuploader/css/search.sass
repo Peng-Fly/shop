@@ -8,7 +8,7 @@ html
 body
   font-size: 14px
   font-family: "microsoft YaHei"
-  background-color: #fff
+  background-color: #eee
   overflow-x: hidden
   margin: 0 auto
   min-width: 320px
@@ -16,11 +16,10 @@ body
   height: 100%
 .fixed-top
   width: 100%
-  height: 7%
+  height: 3rem
   line-height: 3rem
   background-color: #fff
   border-bottom: 1px solid #eee
-  box-sizing: border-box
   .return
     float: left
     height: 100%
@@ -58,44 +57,18 @@ body
     float: right
     width: 15%
     height: 100%
+    text-align: center
     a
       width: 100%
       height: 100%
       display: block
-      background: url("../images/menu.png") no-repeat 12px 18px
-      background-size: 25px 8px
-.box
-  width: 100%
-  height: 93%
-  overflow: hidden
-header
-  width: 20%
-  float: left
-  height: 100%
-  background: #eee
-  overflow: auto
-  .class-nav
-    text-align: center
-    .navigation
-      height: 3.5rem
-      line-height: 3.5rem
-      a
-        text-decoration: none
-        color: #5e5e5e
-    li.red
-      background-color: #fff
-      border-left: 2px solid red
-      box-sizing: border-box
-      a
-        color: red
+      text-decoration: none
+      color: #5e5e5e
 section
-  float: right
-  width: 80%
-  height: 100%
-  background-color: #fff
-  overflow: scroll
-  .xhr-cont
+  width: 100%
+  .sou-cont
     width: 100%
+    overflow: hidden
     h5
       text-align: center
       margin: 10% auto
@@ -110,7 +83,6 @@ section
       a
         text-decoration: none
         color: #5e5e5e
-        display: block
         img
           width: 100%
           border-radius: 50%
@@ -135,9 +107,24 @@ section
           padding-left: 0.5rem
           .rec-mo
             color: rgb(255,70,60)
-            padding-right: .5rem
+            padding-right: 1rem
           .rec-dd
-            padding: 1px 2px
+            padding: 2px 4px
             background-color: rgb(255,70,60)
             color: #fff
-            
+/*默认的热门搜索*/
+.host
+  width: 100%
+  padding-left: 1rem
+  h4
+    height: 3rem
+    line-height: 3rem
+    font-size: 1.2rem
+  a
+    font-size: 1.2rem
+    padding: 0.4rem 1.4rem
+    background-color: #fff
+    text-decoration: none
+    color: #5e5e5e
+    margin: 0.3rem
+    display: inline-block

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />-->
     <meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
     <title>首页</title>
     <link rel="stylesheet" href="css/cssreset-min.css">
@@ -19,7 +18,7 @@
         <!--搜索框-->
         <div class="soso-soso">
             <img src="images/sousou.png" alt="">
-            <input type="text" placeholder="领券立减30元">
+            <input type="text" placeholder="领券立减30元" link="search.html">
         </div>
         <!--分类-->
         <div class="soso-rgt"><a href="classify.html"><span>分类</span></a></div>
@@ -111,15 +110,15 @@
 </section>
 <footer>
     <div class="user">
-        <a href="#">登录</a>
-        <a href="#">注册</a>
-        <a href="javascript:scrollTo(0,0);" class="top">TOP</a>
+        <a href="login.html" class="up">登录</a>
+        <a href="enroll.html" class="on">注册</a>
     </div>
+    <a href="javascript:scrollTo(0,0);" class="top">TOP</a>
     <nav class="btm-nav">
-        <a href="#">提意见</a>
-        <a href="#" class="btn-a">触屏版</a>
-        <a href="#">电脑版</a>
-        <a href="#">帮　助</a>
+        <a href="http://touch.m.dangdang.com/leavemsg.php?t=1500896674">提意见</a>
+        <a href="index.html" class="btn-a">触屏版</a>
+        <a href="http://www.dangdang.com/?source=mobile">电脑版</a>
+        <a href="http://touch.m.dangdang.com/topics.php?page_id=36496">帮　助</a>
     </nav>
     <div class="foot">
         <p>Copyright ©2017 北京当当网信息技术有限公司</p>
@@ -128,11 +127,15 @@
 </footer>
 <div class="footer-nav">
     <a href="#"><img src="images/foot1.png" alt=""></a>
-    <a href="#"><img src="images/foot2.png" alt=""></a>
-    <a href="#"><img src="images/foot3.png" alt=""></a>
-    <a href="#"><img src="images/foot4.png" alt=""></a>
+    <a href="classify.html"><img src="images/foot2.png" alt=""></a>
+    <a href="shopcart.html"><img src="images/foot3.png" alt=""></a>
+    <a href="login.html"><img src="images/foot4.png" alt=""></a>
     <a href="#"><img src="images/foot5.png" alt=""></a>
 </div>
+<div class="fixed-box">
+    <a href="javascript:scrollTo(0,0)" class="btn-box" id="backtop"><img src="images/go-top.png" alt=""></a>
+</div>
+<script src="script/zeptoWithFx.js"></script>
 <script src="script/index.js"></script>
 </body>
 </html>

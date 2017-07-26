@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/cssreset-min.css">
+    <style>
+        html {
+            font-size: 15px;
+        }
+        @media screen and (min-width:400px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        body {
+            font-size: 14px;
+            font-family: "microsoft YaHei";
+            background-color: #fff;
+            overflow-x: hidden;
+            margin: 0 auto;
+            min-width: 320px;
+            max-width: 540px;
+        }
+        .fixed-top {
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .fixed-top .return {
+            float: left;
+            height: 100%;
+            padding-left: 5%;
+        }
+        .fixed-top .return a {
+            display: block;
+        }
+        .fixed-top .return a img {
+            width: 50%;
+            margin-top: 85%;
+        }
+        .fixed-top .sou {
+            width: 70%;
+            height: 2.4rem;
+            line-height: 2.4rem;
+            background-color: #fff;
+            font-size: 1.2rem;
+            float: left;
+            border-radius: 20px;
+            margin-left: 5%;
+            position: relative;
+            top: 0.3rem;
+            text-align: center;
+        }
+        .fixed-top .dian {
+            float: right;
+            width: 15%;
+            height: 100%;
+        }
+        .fixed-top .dian a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url("images/menu.png") no-repeat 12px 18px;
+            background-size: 25px 8px;
+        }
+        .login {
+            width: 100%;
+            text-align: center;
+            padding-top: 2rem;
+        }
+        .login p {
+            width: 100%;
+            height: 2.6rem;
+            line-height: 2.6rem;
+            /*padding: 0 2rem;*/
+            box-sizing: border-box;
+            position: relative;
+        }
+        .login p .username,.password,.btn {
+            width: 90%;
+            border-radius: 20px;
+            border: 1px solid #aeaeae;
+            outline: none;
+            height: 2.6rem;
+            box-sizing: border-box;
+            padding-left: 3rem;
+            background-color: #fff;
+        }
+        .login p:first-child i{
+            display: inline-block;
+            position: absolute;
+            top: 0.3rem;
+            left: 2rem;
+            width: 2rem;
+            height: 2rem;
+            background: url("images/user_icon.png") no-repeat 0 0;
+            background-size: 25px 25px;
+        }
+        .login p:nth-child(3) i{
+            display: inline-block;
+            position: absolute;
+            top: 0.3rem;
+            left: 2rem;
+            width: 2rem;
+            height: 2rem;
+            background: url("images/pw_icon.png") no-repeat 0 0;
+            background-size: 25px 25px;
+        }
+        .login p.hint {
+            height: 1rem;
+            width: 100%;
+        }
+        .login p .btn {
+            padding-left: 0;
+            background-color: #ff5400;
+            color: #fff;
+            border: none;
+        }
+        .login p:last-child {
+            text-align: left;
+            box-sizing: border-box;
+            padding: 0 2rem;
+        }
+        .login p a{
+            text-decoration: none;
+            color: #555555;
+        }
+        .login p .enroll{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<nav class="fixed-top">
+    <!--返回-->
+    <div class="return">
+        <a href="javascript:history.go(-1)">
+            <img src="images/arrow_left.png" alt="">
+        </a>
+    </div>
+    <!--名字-->
+    <div class="sou">
+        登录
+    </div>
+    <!--更多-->
+    <div class="dian">
+        <a href="javascript:"></a>
+    </div>
+</nav>
+<div class="login">
+    <p><i></i><input type="text" name="username" id="username" class="username" placeholder="请输入账号"></p>
+    <p id="error" class="hint"></p>
+    <p><i></i><input type="password" name="password" id="password" class="password" placeholder="请输入密码"></p>
+    <p id="codes" class="hint"></p>
+    <p><input type="button" name="btn" value="立即登录" id="login" class="btn"></p>
+    <p><a href="https://mpassport.dangdang.com/forget_password.php?burl=http%3A%2F%2Fcart.m.dangdang.com%2Fcart.php%3Flogin_app%3Dweb">忘记密码？</a><a href="enroll.html" class="enroll">注册</a></p>
+</div>
+<script src="script/zeptoWithFx.js"></script>
+<script src="script/common.js"></script>
+<script type="text/javascript">
+    $('#login').click(function () {
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+        $.ajax({
+            "url":"http://h6.duchengjiu.top/shop/api_user.php",
+            "type":"POST",
+            "dataType":"json",
+            "data":{
+                "status":"login",
+                "username":username,
+                "password":password
+            },
+            "success":function (response) {
+                console.log(response);
+                if(response.code === 0) {
+                    var data=response.data;
+                    for(var prop in data) {
+                        if(data.hasOwnProperty(prop)){
+                            localStorage.setItem(prop,data[prop]);
+                        }
+                    }
+                    location.assign('index.html');
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

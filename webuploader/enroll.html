@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/cssreset-min.css">
+    <style>
+        html {
+            font-size: 15px;
+        }
+        @media screen and (min-width:400px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        body {
+            font-size: 14px;
+            font-family: "microsoft YaHei";
+            background-color: #fff;
+            overflow-x: hidden;
+            margin: 0 auto;
+            min-width: 320px;
+            max-width: 540px;
+        }
+        .fixed-top {
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .fixed-top .return {
+            float: left;
+            height: 100%;
+            padding-left: 5%;
+        }
+        .fixed-top .return a {
+            display: block;
+        }
+        .fixed-top .return a img {
+            width: 50%;
+            margin-top: 85%;
+        }
+        .fixed-top .sou {
+            width: 70%;
+            height: 2.4rem;
+            line-height: 2.4rem;
+            background-color: #fff;
+            font-size: 1.2rem;
+            float: left;
+            border-radius: 20px;
+            margin-left: 5%;
+            position: relative;
+            top: 0.3rem;
+            text-align: center;
+        }
+        .fixed-top .dian {
+            float: right;
+            width: 15%;
+            height: 100%;
+        }
+        .fixed-top .dian a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url("images/menu.png") no-repeat 12px 18px;
+            background-size: 25px 8px;
+        }
+        .enroll{
+            width: 100%;
+            text-align: center;
+            padding-top: 2rem;
+        }
+        .enroll p {
+            width: 100%;
+            height: 2.5rem;
+            line-height: 2.5rem;
+        }
+        /*input框*/
+        .enroll p .username,.password,.btn {
+            width: 90%;
+            border-radius: 20px;
+            border: 1px solid #555555;
+            height: 2.5rem;
+            padding-left: 2rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+        /*提示区*/
+        .enroll p.hint {
+            height: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 2rem;
+            text-align: left;
+            color: red;
+            line-height: 2rem;
+        }
+        /*同意那横*/
+        .enroll p.argee {
+            text-align: left;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+        /*按钮*/
+        .enroll p .btn {
+            padding-left: 0;
+            background-color: #ff5400;
+            border: none;
+            color: #fff;
+        }
+        /*跳转登录*/
+        .enroll p.argee .login {
+            float: right;
+            text-decoration: none;
+            color: #555555;
+        }
+        .enroll p .vertPos {
+            width: 1rem;
+            height: 1rem;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<nav class="fixed-top">
+    <!--返回-->
+    <div class="return">
+        <a href="javascript:history.go(-1)">
+            <img src="images/arrow_left.png" alt="">
+        </a>
+    </div>
+    <!--名字-->
+    <div class="sou">
+        注册
+    </div>
+    <!--更多-->
+    <div class="dian">
+        <a href="javascript:"></a>
+    </div>
+</nav>
+
+<div class="enroll">
+    <p><input type="text" name="username" id="username" class="username" placeholder="用户名"></p>
+    <p id="error" class="hint"></p>
+    <p><input type="password" name="password" id="password" class="password" placeholder="密码"></p>
+    <p id="codes" class="hint"></p>
+    <p><input type="password" name="password2" id="password2" class="password" placeholder="确认密码"></p>
+    <p id="coodes" class="hint"></p>
+    <p class="argee"><input type="checkbox" checked="checked" id="ourtreaty" class="vertPos"><span>同意</span><a href="#">  《我们的协议》</a><a
+            href="login.html" class="login">密码登录</a></p>
+    <p><input type="button" name="btn" value="立即注册" id="enroll" class="btn"></p>
+</div>
+
+<script src="script/zeptoWithFx.js"></script>
+<script src="script/common.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#username').blur(function () {
+        var username = $('input[name="username"]').val();
+        console.log(username);
+        $.ajax({
+            "url":"http://h6.duchengjiu.top/shop/api_user.php",
+            "type":"POST",
+            "dataType":"json",
+            "data":{
+                "status":"check",
+                "username": username
+            },
+            "success":function (response) {
+                console.log(response);
+                console.log(response.code);
+                if(response.code === 0) {
+                    $('#error').html("");
+                }else if(response.code === 1000){
+                    $('#error').html("请填写3-20位的英文数字下划线");
+                }else if(response.code === 2001) {
+                    $('#error').html("用户名已经存在");
+                }
+            }
+        })
+    })
+    $('#password').blur(function () {
+        var password = $('input[name="password"]').val();
+        if(password.length < 6 || password.length > 20) {
+            $('#codes').html("请输入6到20位密码");
+        }else{
+            $('#codes').html("");
+        }
+    })
+    $('#password2').blur(function () {
+        var password2 = $('input[name="password2"]').val();
+        var password = $('input[name="password"]').val();
+        if(password2.length == 0){
+            $('#coodes').html("请确认密码");
+        }else if(password2 === password){
+            $('#coodes').html("");
+        }else{
+            $('#coodes').html("俩次密码不一致");
+        }
+    })
+    $('#enroll').click(function () {
+        var username = $('input[name="username"]').val()
+        var password = $('input[name="password"]').val()
+        $.ajax({
+            "url":"http://h6.duchengjiu.top/shop/api_user.php",
+            "type":"POST",
+            "dataType":"json",
+            "data":{
+                "status":"register",
+                "username":username,
+                "password":password
+            },
+            "success":function (response) {
+                console.log(response);
+                if(response.code === 0){
+                    alert("注册成功");
+                    location.assign('login.html');
+                }else if(response.code === 2001){
+                    alert("用户已存在");
+
+                }
+            }
+        })
+    })
+})
+</script>
+</body>
+</html>

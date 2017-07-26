@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 15px;
   height: 100%; }
@@ -8,7 +9,7 @@ html {
 body {
   font-size: 14px;
   font-family: "microsoft YaHei";
-  background-color: #fff;
+  background-color: #eee;
   overflow-x: hidden;
   margin: 0 auto;
   min-width: 320px;
@@ -17,11 +18,10 @@ body {
 
 .fixed-top {
   width: 100%;
-  height: 7%;
+  height: 3rem;
   line-height: 3rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  box-sizing: border-box; }
+  border-bottom: 1px solid #eee; }
   .fixed-top .return {
     float: left;
     height: 100%;
@@ -58,68 +58,39 @@ body {
   .fixed-top .dian {
     float: right;
     width: 15%;
-    height: 100%; }
+    height: 100%;
+    text-align: center; }
     .fixed-top .dian a {
       width: 100%;
       height: 100%;
       display: block;
-      background: url("../images/menu.png") no-repeat 12px 18px;
-      background-size: 25px 8px; }
-
-.box {
-  width: 100%;
-  height: 93%;
-  overflow: hidden; }
-
-header {
-  width: 20%;
-  float: left;
-  height: 100%;
-  background: #eee;
-  overflow: auto; }
-  header .class-nav {
-    text-align: center; }
-    header .class-nav .navigation {
-      height: 3.5rem;
-      line-height: 3.5rem; }
-      header .class-nav .navigation a {
-        text-decoration: none;
-        color: #5e5e5e; }
-    header .class-nav li.red {
-      background-color: #fff;
-      border-left: 2px solid red;
-      box-sizing: border-box; }
-      header .class-nav li.red a {
-        color: red; }
+      text-decoration: none;
+      color: #5e5e5e; }
 
 section {
-  float: right;
-  width: 80%;
-  height: 100%;
-  background-color: #fff;
-  overflow: scroll; }
-  section .xhr-cont {
-    width: 100%; }
-    section .xhr-cont h5 {
+  width: 100%; }
+  section .sou-cont {
+    width: 100%;
+    overflow: hidden; }
+    section .sou-cont h5 {
       text-align: center;
       margin: 10% auto;
       font-size: 2rem;
       color: #d43f3a; }
-    section .xhr-cont .rec-list {
+    section .sou-cont .rec-list {
       width: 50%;
       box-sizing: border-box;
       float: left;
       border: 1px solid #eee;
       background-color: #fff; }
-      section .xhr-cont .rec-list a {
+      section .sou-cont .rec-list a {
         text-decoration: none;
-        color: #5e5e5e;
-        display: block; }
-        section .xhr-cont .rec-list a img {
+        color: #5e5e5e; }
+        section .sou-cont .rec-list a img {
           width: 100%;
           border-radius: 50%;
           font-size: 0; }
-        section .xhr-cont .rec-list a .rec-name {
+        section .sou-cont .rec-list a .rec-name {
           display: block;
           width: 100%;
           height: 3rem;
@@ -132,17 +103,34 @@ section {
           color: #5e5e5e;
           box-sizing: border-box;
           padding: 0 0.5rem; }
-        section .xhr-cont .rec-list a p {
+        section .sou-cont .rec-list a p {
           box-sizing: border-box;
           width: 100%;
           line-height: 2rem;
           padding-left: 0.5rem; }
-          section .xhr-cont .rec-list a p .rec-mo {
+          section .sou-cont .rec-list a p .rec-mo {
             color: #ff463c;
-            padding-right: 0.5rem; }
-          section .xhr-cont .rec-list a p .rec-dd {
-            padding: 1px 2px;
+            padding-right: 1rem; }
+          section .sou-cont .rec-list a p .rec-dd {
+            padding: 2px 4px;
             background-color: #ff463c;
             color: #fff; }
 
-/*# sourceMappingURL=classify.css.map */
+/*默认的热门搜索 */
+.host {
+  width: 100%;
+  padding-left: 1rem; }
+  .host h4 {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem; }
+  .host a {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.4rem;
+    background-color: #fff;
+    text-decoration: none;
+    color: #5e5e5e;
+    margin: 0.3rem;
+    display: inline-block; }
+
+/*# sourceMappingURL=search.css.map */

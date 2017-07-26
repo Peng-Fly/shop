@@ -1,0 +1,127 @@
+html {
+  font-size: 15px; }
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 18px; } }
+body {
+  font-size: 14px;
+  font-family: "microsoft YaHei";
+  background-color: #fff;
+  overflow-x: hidden;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 540px; }
+
+.fixed-top {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0; }
+  .fixed-top .return {
+    float: left;
+    height: 100%;
+    padding-left: 5%; }
+    .fixed-top .return a {
+      display: block; }
+      .fixed-top .return a img {
+        width: 50%;
+        margin-top: 85%; }
+  .fixed-top .sou {
+    width: 70%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    float: left;
+    border-radius: 20px;
+    margin-left: 5%;
+    position: relative;
+    top: 0.3rem;
+    text-align: center; }
+  .fixed-top .dian {
+    float: right;
+    width: 15%;
+    height: 100%; }
+    .fixed-top .dian a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("../images/menu.png") no-repeat 12px 18px;
+      background-size: 25px 8px; }
+
+section {
+  width: 100%; }
+  section .cars-conter {
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+    border-top: 5px solid #eee;
+    border-bottom: 5px solid #eee; }
+    section .cars-conter .kuang {
+      float: left;
+      width: 15%;
+      height: 4rem;
+      background: url("../images/kuang.png") no-repeat center center;
+      background-size: 25px 25px; }
+      section .cars-conter .kuang input {
+        width: 100%;
+        height: 100%;
+        -webkit-appearance: none;
+        outline: none; }
+    section .cars-conter img {
+      float: left;
+      width: 25%; }
+    section .cars-conter .carts-cont {
+      float: left;
+      width: 60%; }
+      section .cars-conter .carts-cont .conter {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.5rem 1rem; }
+      section .cars-conter .carts-cont .cart-mo {
+        color: #ff2832;
+        padding-left: 0.5rem; }
+      section .cars-conter .carts-cont span {
+        padding-left: 0.5rem; }
+      section .cars-conter .carts-cont .delete {
+        float: right;
+        margin-right: 2rem;
+        padding: 0.1rem 0.5rem;
+        background-color: #ff2832;
+        color: #fff; }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  overflow: hidden;
+  height: 3.5rem;
+  line-height: 3.5rem; }
+  footer .kuang {
+    float: left;
+    width: 13%;
+    height: 100%;
+    background: url("../images/kuang.png") no-repeat center center;
+    background-size: 25px 25px; }
+    footer .kuang input {
+      width: 100%;
+      height: 100%;
+      -webkit-appearance: none;
+      outline: none; }
+  footer span {
+    display: inline-block;
+    height: 100%; }
+  footer .close {
+    height: 100%;
+    width: 30%;
+    float: right;
+    text-align: center;
+    background-color: #FB4741;
+    color: #fff; }
+  footer .total {
+    float: right; }
+
+/*# sourceMappingURL=shopcart.css.map */

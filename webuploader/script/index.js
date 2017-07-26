@@ -163,7 +163,7 @@ navxhr.onreadystatechange = function (){
         var html = '';
         for(var i=0; i<obj.data.length;i++) {
             var objs = obj.data[i];
-            html += '<li class="navigation"><a href="classify.html?goods_id='
+            html += '<li class="navigation"><a href="classify.html?cat_id='
                 + objs.cat_id +'">' + objs.cat_name + '</a></li>';
             navCont.innerHTML = html;
         }
@@ -180,8 +180,8 @@ xhr.onreadystatechange = function (){
         var html = '';
         for(var i=0; i<obj.data.length;i++) {
             var objs = obj.data[i];
-            html += '<li class="host-list"><a href="details.html?cat_id='
-                + objs.cat_id+'"><img src="'+ objs.goods_thumb
+            html += '<li class="host-list"><a href="details.html?goods_id='
+                + objs.goods_id+'"><img src="'+ objs.goods_thumb
                 +'"><p><span>￥'+ objs.price +'</span></p></a></li>';
             hostCont.innerHTML = html;
         }
@@ -190,17 +190,18 @@ xhr.onreadystatechange = function (){
 xhr.open('GET','http://h6.duchengjiu.top/shop/api_goods.php?'+"&page="+1+"&pagesize="+10)
 xhr.send();
 // 推荐内容
-var recCont = document.querySelector("#recCont")
+var recCont = document.querySelector("#recCont");
 var recxhr = new XMLHttpRequest();
 recxhr.onreadystatechange = function (){
     if (recxhr.readyState == 4 && recxhr.status == 200){
         var obj = JSON.parse(recxhr.responseText);
         var html = '';
+        console.log(obj);
         for(var i=0; i<obj.data.length;i++) {
             var objs = obj.data[i];
             console.log(objs);
-            html += '<li class="rec-list"><a href="details.html?cat_id='
-                + objs.cat_id
+            html += '<li class="rec-list"><a href="details.html?goods_id='
+                + objs.goods_id
                 + '"><img src="'
                 + objs.goods_thumb
                 + '"><span class="rec-name">'
@@ -211,5 +212,29 @@ recxhr.onreadystatechange = function (){
         }
     }
 }
-recxhr.open('GET','http://h6.duchengjiu.top/shop/api_goods.php?'+"&page="+3+"&pagesize="+50)
+recxhr.open('GET','http://h6.duchengjiu.top/shop/api_goods.php?'+"&page="+3+"&pagesize="+50);
 recxhr.send();
+//回到顶部
+var fixedBox = document.querySelector('.fixed-box');
+var clientHeight = document.documentElement.clientHeight;
+window.onscroll = function () {
+    var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if(osTop >= clientHeight) {
+        fixedBox.style.display = "block";
+    }else {
+        fixedBox.style.display = "none";
+    }
+}
+//登陆退出
+if (localStorage.getItem('token')){
+    $('.user').html('<a href="personage.html">'+localStorage.getItem('username')+'</a>'+'<a class="out">退出</ahr>');
+}
+$('.out').click(function () {
+    localStorage.clear();
+    location.href = 'index.html';
+})
+//搜索转跳
+$('.soso-soso').click(function () {
+    location.href = 'search.html';
+})
+

@@ -308,8 +308,7 @@ nav {
     border: 1px solid #eee; }
     .rec-cont .rec-list a {
       text-decoration: none;
-      color: #5e5e5e;
-      display: block; }
+      color: #5e5e5e; }
       .rec-cont .rec-list a img {
         width: 100%;
         border-radius: 50%;
@@ -328,6 +327,7 @@ nav {
         box-sizing: border-box;
         padding: 0 0.5rem; }
       .rec-cont .rec-list a p {
+        box-sizing: border-box;
         width: 100%;
         line-height: 2rem;
         padding-left: 0.5rem; }
@@ -346,11 +346,12 @@ footer {
   background: #fff;
   padding: 0 0 4rem; }
   footer .user {
-    width: 100%;
+    width: 80%;
     height: 3rem;
     line-height: 3rem;
     border-top: 2px solid #eee;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #eee;
+    float: left; }
     footer .user a {
       float: left;
       display: inline-block;
@@ -358,13 +359,20 @@ footer {
       text-decoration: none;
       color: #4D525D;
       font-size: 1rem; }
-    footer .user a.top {
-      float: right;
-      padding: 0 0.4rem 0 1rem;
-      background: transparent url(../images/goto-top-new.png) 0.2rem center no-repeat;
-      background-size: 1rem 1rem;
-      font-size: 1rem;
-      padding-left: 1.3rem; }
+  footer a.top {
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 3rem;
+    width: 20%;
+    display: inline-block;
+    float: right;
+    padding: 0 0.4rem 0 1rem;
+    background: transparent url(../images/goto-top-new.png) 0.2rem center no-repeat;
+    background-size: 1rem 1rem;
+    font-size: 1rem;
+    padding-left: 1.3rem;
+    color: #4D525D;
+    text-decoration: none; }
 
 .btm-nav {
   width: 100%;
@@ -422,5 +430,17 @@ footer {
       background-repeat: no-repeat;
       vertical-align: middle;
       border: 0 none; }
+
+.fixed-box {
+  width: 3rem;
+  display: none;
+  position: fixed;
+  bottom: 56px;
+  right: 0.5rem;
+  z-index: 99; }
+  .fixed-box a img {
+    width: 100%;
+    vertical-align: middle;
+    border: 0 none; }
 
 /*# sourceMappingURL=index.css.map */
