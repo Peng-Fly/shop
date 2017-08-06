@@ -13,8 +13,10 @@ header{
 }
 .cen{
     width:1092.8px;
+    height: 100%;
     margin: 0 auto;
     line-height: 30px;
+    background-color: #f7f7f7;
 }
 .cen a{
     display: inline-block;
@@ -124,6 +126,7 @@ header{
     height: 66px;
     margin: 0 auto;
     padding: 32px 0;
+    background-color: #fff;
 }
 .commont-vip ul li{
     float: left;
@@ -185,8 +188,9 @@ footer .c-box{
     width: 1092.8px;
     margin: 0 auto;
     height: 172px;
-    padding: 25px 0px;
+    padding: 25px 0;
     border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
 }
 /*服务*/
 footer .c-box .tel-email{
@@ -237,6 +241,7 @@ footer .h-box{
     width: 1092.8px;
     margin: 0 auto;
     padding: 20px 0;
+    background-color: #fff;
 }
 footer .h-box .hui{
     background: url(../images/background/huijia.png) center center no-repeat;

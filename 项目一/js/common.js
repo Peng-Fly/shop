@@ -33,7 +33,7 @@ $.ajax({
     }
 });
 
-// 登录退出
+// 搜索
 var searchBtn = document.getElementById('search-btn');
 if (searchBtn){
     searchBtn.addEventListener('click',function () {
